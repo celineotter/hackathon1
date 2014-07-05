@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='chinapp'>
+  <head>
+    <meta charset="utf-8" />
+    <title>chinapp</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  </head>
+
+  <body>
+    <h1>China Immersion App</h1>
+
+    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div ng-view></div>
+
+    <script></script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+    <script src="app/flashcards/flashcards.js"></script>
+    <script src="app/map/map.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+    <script src="data/data.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+body {
+/*	background-image: url(../green-background.jpg);*/
+	text-align: center;
+	color: black;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 40px;
+}
+
+.navbar-default {
+	margin-right: 125px;
+	margin-left: 125px;
+}
+
+#mandarinCharacter {
+	font-size: 110px;
+}
+
+
+.cardTest {
+	display: inline-block !important;
+	width:250px;
+	height:200px;
+	vertical-align:top
+}
+.cardContainer {
+	text-align:center;
+}

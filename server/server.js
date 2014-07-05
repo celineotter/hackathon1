@@ -9,4 +9,12 @@ mongoose.connect('mongodb://localhost/shortly'); // connect to mongo database na
 require('./config/middleware.js')(app, express);
 
 // export our app for testing and flexibility, required by index.js
-module.exports = app;*/
+module.exports = app;
+*/
+
+//var http = require('http');
+
+/*var server = http.createServer(function (request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello World\n");
+});*/
