@@ -1,9 +1,9 @@
 body {
-/*	background-image: url(../green-background.jpg);*/
 	text-align: center;
 	color: black;
 	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 40px;
+	font-size: 17px !important;
+	background-image: url(../images/rflying_fish_waves_highres.png);
 }
 
 .navbar-default {
@@ -20,8 +20,46 @@ body {
 	display: inline-block !important;
 	width:250px;
 	height:200px;
-	vertical-align:top
+	vertical-align:top;
 }
 .cardContainer {
 	text-align:center;
+}
+
+/*.panel-body{
+	padding-top: 5px !important;
+}*/
+
+.btn-group{
+	padding-bottom: 15px;
+}
+
+#translateCard{
+  display: table;
+}
+
+/*#translate-mid{
+	
+}*/
+
+#translate-div {
+	positon: absolute;
+	height: 50%;
+/*   display: table-cell;
+   text-align: center;
+   vertical-align: middle;*/
+}
+
+.procedure-details{
+	max-height: 100px;
+
+	transition: .8s;
+  overflow: hidden;
+}
+.procedure-details.hidden {
+    max-height: 0;
+}
+
+a {
+	text-decoration:none !important;
 }
