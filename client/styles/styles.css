@@ -18,12 +18,14 @@ body {
 
 .cardTest {
 	display: inline-block !important;
-	width:250px;
-	height:200px;
-	vertical-align:top;
+	width: 250px;
+	height: 200px;
+	vertical-align: top;
+	margin-left: 10px;
 }
 .cardContainer {
-	text-align:center;
+/*	text-align: center;*/
+	display: inline-block;
 }
 
 /*.panel-body{
@@ -32,34 +34,39 @@ body {
 
 .btn-group{
 	padding-bottom: 15px;
+	clear: both
 }
 
-#translateCard{
+/*#translateCard{
   display: table;
-}
+}*/
 
 /*#translate-mid{
 	
 }*/
 
-#translate-div {
+/*#translate-div {
 	positon: absolute;
 	height: 50%;
-/*   display: table-cell;
+   display: table-cell;
    text-align: center;
-   vertical-align: middle;*/
-}
+   vertical-align: middle;
+}*/
 
-.procedure-details{
+/*.procedure-details{
 	max-height: 100px;
 
 	transition: .8s;
   overflow: hidden;
-}
+}*/
 .procedure-details.hidden {
-    max-height: 0;
+  max-height: 0;
 }
 
 a {
-	text-decoration:none !important;
+	text-decoration: none !important;
+}
+
+.btn-group {
+	display: block;
 }

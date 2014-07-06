@@ -23,50 +23,46 @@
 
   
   <div class="btn-group" data-spy="affix" data-offset-top="200">
-    <button type="button" class="btn btn-default">1-10</button>
-    <button type="button" class="btn btn-default">11-20</button>
-    <button type="button" class="btn btn-default">21-30</button>  
-    <button type="button" class="btn btn-default">31-40</button>
-    <button type="button" class="btn btn-default">41-50</button>
+<!--     <div class="span12"> -->
+      <button type="button" class="btn btn-default" ng-click="getData()">Reset</button>      
+      <button type="button" class="btn btn-default" ng-click="getData(0)">1-10</button>
+      <button type="button" class="btn btn-default" ng-click="getData(10)">11-20</button>
+      <button type="button" class="btn btn-default" ng-click="getData(20)">21-30</button>  
+      <button type="button" class="btn btn-default" ng-click="getData(30)">31-40</button>
+      <button type="button" class="btn btn-default" ng-click="getData(40)">41-50</button>
+<!--     </div> -->
   </div>
 
-<!--   <div class="pagination">
-    <ul>
-      <li class="disabled"><a href="#">&laquo;</a></li>
-      <li class="active"><a href="#">1-10</a></li>
-      <li class="active"><a href="#">11-20</a></li>
-      <li class="active"><a href="#">21-30</a></li>
-      <li class="active"><a href="#">31-40</a></li>
-      <li class="active"><a href="#">41-50</a></li>
-    </ul>
-  </div> -->
   
+  <div class="col-med-2 "></div>
+  <div class="offset-5 col-med-7 ">
   <div
     class="cardContainer"
-    ng-repeat='char in data | filter:findChar'
-    ng-click="char.showing = !char.showing">
+    ng-repeat='word in data | filter:findChar'
+    ng-click="word.showing = !word.showing">
+
     
-    <div id="mandCard" ng-if="!char.showing" class="cardTest panel panel-default">
+    <div id="mandCard" ng-if="!word.showing" class="cardTest panel panel-default">
       <div class="panel-body">
         <div id='mandarinCharacter'>
 
-          <a href="#">
-            {{char.character}}
+          <a href="#" onclick="return false">
+            {{word.character}}
           </a>
         </div>
       </div>
     </div>
     
-    <div id='translateCard' class='cardTest panel panel-default' ng-if="char.showing">  
+    <div id='translateCard' class='cardTest panel panel-default' ng-if="word.showing">  
       <div id='translate-mid' class="panel-body">
-        <div id='pinyin'><a href="#">{{char.pinyin}}</href></div>
-        <div id='translate-div' >{{char.translation}}</div>      
+        <div id='pinyin'><a href="#" onclick="return false">{{word.pinyin}}</a></div>
+        <div id='translate-div' >{{word.translation}}</div>      
       </div>
     </div>
-    <!--     <div id='extraVocabCard'>{{char.extraVocab}}</div> -->
+    <!--     <div id='extraVocabCard'>{{word.extraVocab}}</div> -->
+  
   </div>
-
-
+  </div>
 </div>
 
 
