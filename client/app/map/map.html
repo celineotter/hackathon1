@@ -1,0 +1,53 @@
+<div id="container" ng-controller:"MapController">
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav">
+        <li><a href= "#/flashcards">flashcards</a></li>
+        <li class="active"><a href= "#/map">map</a></li>
+      </ul>
+
+
+      <form class="navbar-form navbar-left"ng-submit="search(location, term)" id="search-bar">
+        <input id="location" ng-model="location" class="form-control" placeholder="Location">
+        <input id="term" ng-model="term" class="form-control" placeholder="Search Term">
+        <button id="search" class="btn btn-primary">Search</button>
+      </form>
+      
+    <div id="loading-image"><img src="/images/ajax-loader3.gif" alt="#" ng-show="loading"/></div>
+    
+    </div>
+  </div>
+</nav>
+
+
+<!--   <div class="modal" ng-show="loading"></div> -->
+<!--   <div class="modal" ng-show="loading"></div> -->
+<!--  <div id="spinner" style="background:url('/images/ajax-loader.gif') #000 center no-repeat;opacity:.5;width:100%;height:100%;display:none;position:absolute" ng-show="!loading"/> -->
+
+
+
+  <div
+    class="cardContainer"
+    ng-repeat="result in results">
+
+    
+    <div id="translateCard" class="cardTest panel panel-default">  
+      <div id="translate-mid" class="panel-body">
+        <div id="pinyin"><span class="word-accentuate" onclick="return false">{{result.name}}</span></div>
+        <div id="translate-div" >{{result.phone}}</div>      
+        <div id="translate-div" >{{result.rating}}</div>      
+        <div id="translate-div" >{{result.review[0]}}</div>      
+        <div id="translate-div" >{{result.url}}</div>      
+      </div>
+    </div>
+
+    <!--     <div id="extraVocabCard">{{word.extraVocab}}</div> -->
+  </div>
+
+
+
+</div>

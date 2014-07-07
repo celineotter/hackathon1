@@ -12,13 +12,13 @@ angular.module('chinapp')
 			id: 1,
 			character: '一',
 			pinyin: 'yi1',
-			translation: 'one/1/single/a(n)',
+			translation: 'one/ 1/ single/ a(n)',
 			extraVocab: undefined
 		}, {
 			id: 2,
 			character: '是',
 			pinyin: 'shi4',
-			translation: 'is/are/am/yes/to be',
+			translation: 'is/ are/ am/ yes/ to be',
 			extraVocab: undefined
 		}, {
 			id: 3,
@@ -30,7 +30,7 @@ angular.module('chinapp')
 			id: 4,
 			character: '了',
 			pinyin: 'le/liao3/liao4',
-			translation: '(modal particle intensifying preceding clause) /(completed action marker), to know/to understand/to know, clear, look afar from a high place',
+			translation: '(modal particle intensifying preceding clause) /(completed action marker), to know/ to understand/ to know, clear, look afar from a high place',
 			extraVocab: undefined
 		}, {
 			id: 5,
@@ -228,13 +228,14 @@ angular.module('chinapp')
 			id: 37,
 			character: '那',
 			pinyin: 'na3/na4/nei4',
-			translation: 'how/which, that/those, that/those/(sometimes used before a measure word, especially in Beijing)',
+			translation: 'how/which, that/ those, that/ those/ (sometimes used before a measure word, especially in Beijing)',
 			extraVocab: undefined
 		},{
 			id: 38,
 			character: '得',
 			pinyin: 'de2/de/dei3',
-			translation: 'obtain /get /gain /proper /suitable /proud /contented /allow /permit /ready /finished, a sentence particle used after a verb to show effect /degree or possibility, to have to/must/ought to/to need to',
+			translation: 'obtain /get /gain /proper /suitable /proud /contented /allow /permit /ready /finished, a sentence particle used after a verb to show effect',
+			//degree or possibility, to have to /must /ought to /to need to',
 			extraVocab: undefined
 		},{
 			id: 39,
@@ -246,7 +247,8 @@ angular.module('chinapp')
 			id: 40,
 			character: '着',
 			pinyin: 'zhao1 /zhao2 /zhe /zhu4 /zhuo2',
-			translation: 'catch/receive/suffer, part. indicates the successful result of a verb/to touch/to come in contact with/to feel/to be affected by/to catch fire/to fall asleep/to burn, -ing part. (indicates an action in progress)/part. coverb-forming after some verbs, to make known/to show/to prove/to write/book/outstanding, to wear (clothes)/to contact/to use/to apply',
+			translation: 'catch /receive /suffer, part. indicates the successful result of a verb/to touch /to come in contact with /to feel /to be affected by /to catch fire',
+			//to fall asleep /to burn, -ing part. (indicates an action in progress) /part. coverb-forming after some verbs, to make known /to show /to prove /to write /book /outstanding, to wear (clothes) /to contact /to use /to apply',
 			extraVocab: undefined
 		},{
 			id: 41,

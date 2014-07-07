@@ -1,5 +1,5 @@
 angular.module('chinapp', [
-  // 'chinapp.maps',
+  'chinapp.map',
   'chinapp.flashcards',
   'ngRoute'
 ])

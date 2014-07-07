@@ -10,8 +10,12 @@ angular.module('chinapp.flashcards', [])
   
   $scope.data = undefined;
 
-  $scope.getData = function (start) { debugger;
+  $scope.getData = function (start) {
     $scope.data = FlashcardData.vocabList.slice(start, start +10);
   };
+
+  $scope.myModel = {
+        "A": "1-10"
+    };
 
 });

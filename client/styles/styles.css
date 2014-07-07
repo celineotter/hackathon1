@@ -15,7 +15,6 @@ body {
 	font-size: 110px;
 }
 
-
 .cardTest {
 	display: inline-block !important;
 	width: 250px;
@@ -28,37 +27,12 @@ body {
 	display: inline-block;
 }
 
-/*.panel-body{
-	padding-top: 5px !important;
-}*/
 
 .btn-group{
 	padding-bottom: 15px;
 	clear: both
 }
 
-/*#translateCard{
-  display: table;
-}*/
-
-/*#translate-mid{
-	
-}*/
-
-/*#translate-div {
-	positon: absolute;
-	height: 50%;
-   display: table-cell;
-   text-align: center;
-   vertical-align: middle;
-}*/
-
-/*.procedure-details{
-	max-height: 100px;
-
-	transition: .8s;
-  overflow: hidden;
-}*/
 .procedure-details.hidden {
   max-height: 0;
 }
@@ -69,4 +43,24 @@ a {
 
 .btn-group {
 	display: block;
+}
+
+.word-accentuate {
+	color: #428bca;
+}
+
+.word-accentuate:hover,
+.word-accentuate:focus {
+	color: #2a6496;
+	cursor: pointer;
+}
+
+#header-accentuate {
+	font-size: 50px !important;
+	color: #2a6496;
+	text-shadow:2px 2px #428bca;
+}
+
+#loading-image {
+	padding-top: 9px;
 }
