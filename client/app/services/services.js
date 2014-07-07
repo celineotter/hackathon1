@@ -8,8 +8,8 @@
  */
 
 
-
-angular.module('services.yelpService', [
+angular.module('chinapp.services', [
+// angular.module('services.yelpService', [
 /*  'services.lodash',
   'services.geocodeService'*/
 ])
@@ -86,7 +86,7 @@ angular.module('services.yelpService', [
     //  * @param {string} term - extra terms to search for
     //  * @return {promise} resolves to retrieved businesses
      
-    search: function(location, term) { debugger;
+    search: function(location, term) {
       var deferred = $q.defer();
       $http.jsonp('http://api.yelp.com/business_review_search?callback=JSON_CALLBACK', {
         params: {
@@ -96,12 +96,13 @@ angular.module('services.yelpService', [
           limit: 20
         }
       }).then(function(response) {
-        debugger;
+
         var businesses = convertYelpDataFormat(response.data.businesses);
-        debugger;
+
 /*        var promises = addGeocodeToBusinesses(businesses);*/
-        debugger;
+
 /*        $q.all(promises).then(function(results) {*/
+
         $q.all(businesses).then(function(results) {
           deferred.resolve(results);
         });

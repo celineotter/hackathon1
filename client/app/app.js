@@ -1,6 +1,7 @@
 angular.module('chinapp', [
   'chinapp.map',
   'chinapp.flashcards',
+  'chinapp.services',
   'ngRoute'
 ])
 .config(function($routeProvider, $httpProvider) {

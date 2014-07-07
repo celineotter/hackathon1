@@ -28,7 +28,7 @@ body {
 }
 
 
-.btn-group{
+.btn-group {
 	padding-bottom: 15px;
 	clear: both
 }
@@ -62,5 +62,21 @@ a {
 }
 
 #loading-image {
-	padding-top: 9px;
+	/*padding-top: 9px;*/
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#yelp-no-match {
+	color: red;
+	background: white;
+	border-radius: 3px;
+  margin-right: 125px;
+	margin-left: 125px;
+}
+#yelp-logo {
+	width: 70px;
+	float: left;
+	margin-top: 10px;
 }

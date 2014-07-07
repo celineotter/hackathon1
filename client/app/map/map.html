@@ -16,18 +16,15 @@
         <input id="term" ng-model="term" class="form-control" placeholder="Search Term">
         <button id="search" class="btn btn-primary">Search</button>
       </form>
-      
-    <div id="loading-image"><img src="/images/ajax-loader3.gif" alt="#" ng-show="loading"/></div>
     
+    <img src="/images/ajax-loader3.gif" alt="#" id="loading-image" ng-show="loading"/>
+    <img id="yelp-logo" src="/images/yelpLogo.png" alt="#"/>
     </div>
   </div>
 </nav>
 
 
-<!--   <div class="modal" ng-show="loading"></div> -->
-<!--   <div class="modal" ng-show="loading"></div> -->
-<!--  <div id="spinner" style="background:url('/images/ajax-loader.gif') #000 center no-repeat;opacity:.5;width:100%;height:100%;display:none;position:absolute" ng-show="!loading"/> -->
-
+  <div id="yelp-no-match" ng-show="noResult">Sorry, Yelp.com has no matching results for your search inputs</div>
 
 
   <div
