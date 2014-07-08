@@ -1,0 +1,59 @@
+<div id="container" ng-controller="FirebaseDataController">
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href= "#/flashcards">Flashcards</a></li>
+        <li class="active"><a href= "#/testData">Character Test</a></li>
+        <li><a href= "#/map">Map</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+  <!--  radio-buttons -->
+  <div class="btn-group" data-spy="affix" data-toggle="buttons-radio" data-offset-top="200">
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(0)">1-10</button>
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(10)">11-20</button>
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(20)">21-30</button>  
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(30)">31-40</button>
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData()">Random</button>
+  </div>
+  
+  <!-- cards -->
+  <div class="col-med-2 "></div>
+  <div class="offset-5 col-med-7 ">
+
+  <div class="cardContainer" ng-click="showing = !showing">
+    
+    <div id="mandCard" ng-if="!showing && testCard" class="cardTest panel panel-default">
+      <div class="panel-body">
+        <div id="mandarinCharacter">
+
+          <span class="word-accentuate" onclick="return false">
+            {{testCard.character}}
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="translateCard" class="cardTest panel panel-default" ng-if="showing && testCard">  
+      <div id="translate-mid" class="panel-body">
+        <div id="pinyin"><span class="word-accentuate" onclick="return false">{{testCard.pinyin}}</span></div>
+        <div id="translate-div" >{{testCard.translation}}</div>      
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+    
+
+</div>
