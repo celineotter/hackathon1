@@ -10,7 +10,17 @@
         <li class="active"><a href= "#/testData">Character Test</a></li>
         <li><a href= "#/map">Map</a></li>
       </ul>
-      
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input id="pinyinInput" type="search" ng-model="findChar" class="form-control" placeholder="Guess in pinyin"
+          ng-class ="{red: pinyinFail, green: pinyinPass }">
+          <input id="englishInput" type="search" ng-model="findEnglish" class="form-control" placeholder="Guess the english"
+          ng-class ="{red: translationFail, green: translationPass, blue: defaultBorder}">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="validateForm()">Validate</button>
+
+      </form>
     </div>
   </div>
 </nav>
@@ -25,6 +35,9 @@
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData()">Random</button>
   </div>
+  <div class="col-med-12 "></div>
+
+  <label ng-show="!testCard.character" class="warning">Click on a level above to start!</label>
   
   <!-- cards -->
   <div class="col-med-2 "></div>

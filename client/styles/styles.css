@@ -80,3 +80,23 @@ a {
 	float: left;
 	margin-top: 10px;
 }
+.red {
+  border: red solid 2px !important;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.green {
+  border: green solid 2px !important;
+  padding: 10px;
+  margin: 0 10px;
+}
+.warning {
+	color: #2a6496;
+	background: white;
+	border-radius: 5px;
+	border: #ccc solid 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+}

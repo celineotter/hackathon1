@@ -36,10 +36,13 @@
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
 <!--     </div> -->
   </div>
-
+  
+  <div class="col-med-12 "></div>
+  <label ng-show="!data[0].character" class="warning">'Click' on a level above to start!</label>
+  <div class="col-med-12 "></div>
+  <label ng-show="!data[0].character" class="warning">Then test your memory with the inputs fields above</label>  
+  <div class="col-med-12 "></div>
   <!-- cards -->
-  <div class="col-med-2 "></div>
-  <div class="offset-5 col-med-7 ">
   <div
     class="cardContainer"
     ng-repeat="word in data | filter:{pinyin :findChar} | filter:{translation : findEnglish}"

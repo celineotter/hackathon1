@@ -1,5 +1,4 @@
 
-
 angular.module('chinapp.flashcards', [])
 
 .controller('FlashcardsController', function ($scope, FlashcardData) {
