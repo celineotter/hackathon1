@@ -8,7 +8,6 @@ angular.module("chinapp.firebaseData", ["firebase"])
   firebaseData.set(FlashcardData.vocabListObj);
 
   $scope.validateForm = function () {
-    debugger;
     if ($scope.testCard.pinyin.indexOf($scope.findChar) === -1) {
       $scope.pinyinFail = true;
     } else {
@@ -31,8 +30,9 @@ angular.module("chinapp.firebaseData", ["firebase"])
 
     var wrapper = function() {
       var cardId;
-
-      if (input === undefined) {
+      if (input === 'reset') {
+        return $scope.testCard = undefined;
+      } else if (input === undefined) {
         cardId = Math.floor((Math.random() * 50));
       } else {
         cardId = Math.floor((Math.random() * 10)) + input;

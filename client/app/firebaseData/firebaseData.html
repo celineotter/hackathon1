@@ -10,34 +10,40 @@
         <li class="active"><a href= "#/testData">Character Test</a></li>
         <li><a href= "#/map">Map</a></li>
       </ul>
-
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input id="pinyinInput" type="search" ng-model="findChar" class="form-control" placeholder="Guess in pinyin"
-          ng-class ="{red: pinyinFail, green: pinyinPass }">
-          <input id="englishInput" type="search" ng-model="findEnglish" class="form-control" placeholder="Guess the english"
-          ng-class ="{red: translationFail, green: translationPass, blue: defaultBorder}">
-        </div>
-        <button type="submit" class="btn btn-default" ng-click="validateForm()">Validate</button>
-
-      </form>
     </div>
   </div>
 </nav>
 
-
-  <!--  radio-buttons -->
-  <div class="btn-group" data-spy="affix" data-toggle="buttons-radio" data-offset-top="200">
+  <label class="warning">
+    <!--  buttons-group -->
+    <div class="btn-group" data-spy="affix" data-toggle="buttons-radio" data-offset-top="200">
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData('reset')">Reset</button>
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(0)">1-10</button>
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(10)">11-20</button>
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(20)">21-30</button>  
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(30)">31-40</button>
       <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData()">Random</button>
-  </div>
-  <div class="col-med-12 "></div>
+      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData()">Random:1-50</button>
+    </div>
+    <div class="col-med-12 "></div>
+    <label class="instruction" ng-show="!testCard.character">
+      <div>'Click' on a range above to test your knowledge</div>
+      <div>(or) generate a random card between 0-50!</div>
+      <div class="col-med-12 "></div>
+      <div>Test yourself using the inputs fields below</div>
+    </label>
+    <div class="col-med-12 "></div>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input id="pinyinInput" type="search" ng-model="findChar" class="form-control" placeholder="Guess in pinyin"
+        ng-class ="{red: pinyinFail, green: pinyinPass }">
+        <input id="englishInput" type="search" ng-model="findEnglish" class="form-control" placeholder="Guess the english"
+        ng-class ="{red: translationFail, green: translationPass, blue: defaultBorder}">
+      </div>
+      <button type="submit" class="btn btn-primary" ng-click="validateForm()">Validate</button>
+    </form>
+  </label>
 
-  <label ng-show="!testCard.character" class="warning">Click on a level above to start!</label>
   
   <!-- cards -->
   <div class="col-med-2 "></div>

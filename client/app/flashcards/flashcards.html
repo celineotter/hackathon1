@@ -11,36 +11,45 @@
         <li><a href= "#/testData">Character Test</a></li>
         <li><a href= "#/map">Map</a></li>
       </ul>
-
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="search" ng-model="findChar" class="form-control" placeholder="Guess in pinyin">
-        </div>
-        <div class="form-group">
-          <input type="search" ng-model="findEnglish" class="form-control" placeholder="Guess the english">
-        </div>
-      </form>
-      
     </div>
   </div>
 </nav>
 
-  <!--  radio-buttons -->
-  <div class="btn-group" data-spy="affix" data-toggle="buttons-radio" data-offset-top="200">
-      <!--     <div class="span12"> -->
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" value="reset" ng-click="getData()">0</button>      
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" value="1-10" ng-click="getData(0)">1-10</button>
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(10)">11-20</button>
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(20)">21-30</button>  
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(30)">31-40</button>
-      <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
-<!--     </div> -->
-  </div>
+  <label class="warning">
+    <!--  buttons-group -->
+    <div class="btn-group" data-spy="affix" data-toggle="buttons-radio" data-offset-top="200">
+        <!--     <div class="span12"> -->
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" value="reset" ng-click="getData()">0</button>      
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" value="1-10" ng-click="getData(0)">1-10</button>
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(10)">11-20</button>
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(20)">21-30</button>  
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(30)">31-40</button>
+        <button type="button" class="btn btn-default" ng-model="myModel['A']" ng-click="getData(40)">41-50</button>
+    </div> 
+    <div class="col-med-12 "></div>
+    <label class="instruction" ng-show="!data[0].character">
+      <div>'Select' on a level above to start learning! </div>
+      <div class="col-med-12 "></div>
+      <div>1-10 will display the 10 most common characters</div>
+      <div class="col-med-12 "></div>
+      <div>'Click' on a card for its translation</div>
+      <div class="col-med-12 "></div>
+      <div>Test your memory with the inputs fields below</div>
+    </label>
+    <div class="col-med-12 "></div>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="search" ng-model="findChar" class="form-control" placeholder="Guess in pinyin">
+      </div>
+      <div class="form-group">
+        <input type="search" ng-model="findEnglish" class="form-control" placeholder="Guess the english">
+      </div>
+    </form>
+  </label>
+
   
-  <div class="col-med-12 "></div>
-  <label ng-show="!data[0].character" class="warning">'Click' on a level above to start!</label>
-  <div class="col-med-12 "></div>
-  <label ng-show="!data[0].character" class="warning">Then test your memory with the inputs fields above</label>  
+
+
   <div class="col-med-12 "></div>
   <!-- cards -->
   <div
