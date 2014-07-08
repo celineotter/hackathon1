@@ -25,14 +25,18 @@
 </nav>
 
 
-  <label id="yelp-no-match" class="warning" ng-show="noResult">Sorry, Yelp.com has no matching results for your search inputs</label>
+<label id="yelp-no-match" class="warning" ng-show="noResult">Sorry, Yelp.com has no matching results for your search inputs</label>
+
+
+<!-- <leaflet defaults="defaults" center="center" height="480px" width="640px"></leaflet> -->
+  
+
 
 
   <div
     class="cardContainer"
     ng-repeat="result in results">
 
-    
     <div id="translateCard" class="cardTest panel panel-default">  
       <div id="translate-mid" class="panel-body">
         <div id="pinyin"><span class="word-accentuate" onclick="return false">{{result.name}}</span></div>
@@ -42,8 +46,6 @@
         <div id="translate-div" >{{result.url}}</div>      
       </div>
     </div>
-
-    <!--     <div id="extraVocabCard">{{word.extraVocab}}</div> -->
   </div>
 
 

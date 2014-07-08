@@ -1,4 +1,4 @@
-angular.module('chinapp.map', ['chinapp.services'])
+angular.module('chinapp.map', ['chinapp.services'])   // "leaflet-directive"
 
 .controller('MapController', function ($scope, yelpService, $q) {
 	$scope.loading = false;
@@ -30,7 +30,13 @@ angular.module('chinapp.map', ['chinapp.services'])
         $scope.location = '';
         $scope.term = '';
       });
-   //}
-
 	};
+
+
+
+
+
+
+
+
 });
