@@ -11,10 +11,9 @@
         <li class="active"><a href= "#/map">Map</a></li>
       </ul>
 
-
       <form class="navbar-form navbar-left"ng-submit="search(location, term)" id="search-bar">
-        <input id="location" ng-model="location" class="form-control" placeholder="Location">
-        <input id="term" ng-model="term" class="form-control" placeholder="Search Term">
+        <input id="location" ng-model="location" class="form-control" placeholder="Enter Location">
+        <input id="term" ng-model="term" class="form-control" placeholder="Enter Search Term">
         <button id="search" class="btn btn-primary">Search</button>
       </form>
     
@@ -25,29 +24,77 @@
 </nav>
 
 
-<label id="yelp-no-match" class="warning" ng-show="noResult">Sorry, Yelp.com has no matching results for your search inputs</label>
+
+<label class="warning">
+
+  <label class="instruction" ng-show="!testCard.character">
+    <div>Find nearby chinese restaurants or stores to test your new knowledge out!</div>
+  </label>
+  <div class="col-med-12 "></div>
+
+  <div id="yelp-no-match" ng-show="noResult">Sorry, Yelp.com has no matching results for your search inputs</div>
+</label>
 
 
-<!-- <leaflet defaults="defaults" center="center" height="480px" width="640px"></leaflet> -->
-  
 
 
 
-  <div
-    class="cardContainer"
-    ng-repeat="result in results">
 
-    <div id="translateCard" class="cardTest panel panel-default">  
-      <div id="translate-mid" class="panel-body">
-        <div id="pinyin"><span class="word-accentuate" onclick="return false">{{result.name}}</span></div>
-        <div id="translate-div" >{{result.phone}}</div>      
-        <div id="translate-div" >{{result.rating}}</div>      
-        <div id="translate-div" >{{result.review[0]}}</div>      
-        <div id="translate-div" >{{result.url}}</div>      
-      </div>
+<my-boxmap id="map" ></my-boxmap>
+
+
+<div id="yelp-businesses" class="panel panel-default right" ng-show="results[0].name">
+  <div class="panel-body">
+    
+    <div ng-if="results.length" ng-repeat="result in results" class="yelp-business">
+
+      <div class="clearfix">
+
+        <div class="pull-left thumbnail">
+          <img ng-src="{{result.photo || 'http://placehold.it/100x100' }}">    
+        </div>
+        
+        <div class="title">{{ result.name }}</div>
+  <!--       <raty ng-if="result.rating" score="{{ result.rating }}" number="5"></raty> -->
+  <!--       <div ng-if="!result.rating">Rating not available</div> -->
+        
+        <div>{{ result.address.address1 || result.address.city }}, {{ result.address.zip }}</div>
+        <div>{{ result.phone }}</div>
+
+        <div>
+          <strong>Categories:</strong> <span class="badge" ng-repeat="category in result.categories track by $index">{{category}}</span>
+        </div>
+      </div><!-- /.clearfix -->
+      
+      <div class="col-med-12 "></div>
+    
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div
+  class="cardContainer"
+  ng-repeat="result in results">
+
+  <div id="translateCard" class="cardTest panel panel-default">  
+    <div id="translate-mid" class="panel-body">
+      <div id="pinyin"><span class="word-accentuate" onclick="return false">{{result.name}}</span></div>
+      <div id="translate-div" >{{result.phone}}</div>      
+      <div id="translate-div" >{{result.rating}}</div>      
+      <div id="translate-div" >{{result.review[0]}}</div>      
+      <div id="translate-div" >{{result.url}}</div>      
     </div>
   </div>
-
+</div> -->
 
 
 </div>

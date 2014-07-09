@@ -1,4 +1,4 @@
-angular.module('chinapp.map', ['chinapp.services'])   // "leaflet-directive"
+angular.module('chinapp.map', ['chinapp.services', 'chinapp.mapDirective'])
 
 .controller('MapController', function ($scope, yelpService, $q) {
 	$scope.loading = false;
@@ -8,11 +8,6 @@ angular.module('chinapp.map', ['chinapp.services'])   // "leaflet-directive"
 		$scope.noResult = false;
 		$scope.results = undefined;
 		$scope.loading = true;
-/*    if (!/\w+/.test(location)) {
-      alert('Sorry, a location is required!');
-    } else {*/
-
-      /*$scope.refreshMap(location);*/
 
       $q.all([
         yelpService.search(location, term)
@@ -21,10 +16,10 @@ angular.module('chinapp.map', ['chinapp.services'])   // "leaflet-directive"
         $scope.loading = false;
 
         if(results[0][0] === undefined) {
-        $scope.noResult = true;
+          $scope.noResult = true;
 
         } else {
-          $scope.results = results[0].slice(0, 20);
+          $scope.results = results[0].slice(0, 10);
           /*$scope.addMarkers($scope.results);*/
         }
         $scope.location = '';
@@ -36,7 +31,6 @@ angular.module('chinapp.map', ['chinapp.services'])   // "leaflet-directive"
 
 
 
-
-
-
 });
+
+
